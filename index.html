@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Collect the cats</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Cat Collector!</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Instructions</h3>
+                    <p>
+                        Random number will be shown.
+                    </p>
+                    <p>
+                        You will see 4 cats below and by clicking any cat, a specific amount will be added to total score.
+                    </p>
+                    <p>
+                        Win by matching total score to the random number generated at the game start.
+                    </p>
+                    <p>
+                        Value is hidden until cat is clicked.
+                    </p>
+                    <p>
+                        Values change each new game.  Best of luck!
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <span id = "randomNumber"> </span>
+                </div>
+                <div class="col-md-6">
+                    Wins: <span id = "wins">0</span>
+                    Losses: <span id = "losses">0</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <button type="button" class="btn btn-outline-info"><img id="catBtn" src="assets/images/catcollected1.jpg" height= 100px width= 100px alt="Cat1"></button> 
+                    <button type="button" class="btn btn-outline-info"><img id="catBtn" src="assets/images/catcollected2.jpg" height= 100px width= 100px alt="Cat2"></button>
+                    <button type="button" class="btn btn-outline-info"><img id="catBtn" src="assets/images/catcollected3.jpg" height= 100px width= 100px alt="Cat3"></button>
+                    <button type="button" class="btn btn-outline-info"><img id="catBtn" src="assets/images/catcollected4.jpg" height= 100px width= 100px alt="Cat4"></button>
+                </div>
+            </div>   
+            <div class="row">
+                <div class="col-md-12">
+                    Total score: <span id = "score">  </span>
+                </div>
+            </div>
+        </div>
+        <script src="assets/javascript/game.js"></script>
+    </body>
+</html>
