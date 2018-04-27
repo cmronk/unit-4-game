@@ -10,7 +10,7 @@ var losses = 0;
 // generates starting random number from 19-120
 // (Math.floor(Math.random() * (max-min) + 1)) + min)
 var starting = Math.floor(Math.random() * 101 + 19);
-// console.log(starting);
+console.log(starting);
 $("#randomNumber").text(starting);
 
 // Generates values for each of the buttons from 1-12 
@@ -20,6 +20,19 @@ var savedNum2 = (Math.floor(Math.random() * 11 + 1));
 var savedNum3 = (Math.floor(Math.random() * 11 + 1));
 
 // functions
+// reset
+function reset() {
+    starting = (Math.floor(Math.random() * 101 + 19));
+    $("#randomNumber").text(starting);
+    savedNum = (Math.floor(Math.random() * 11 + 1));
+    savedNum1 = (Math.floor(Math.random() * 11 + 1));
+    savedNum2 = (Math.floor(Math.random() * 11 + 1));
+    savedNum3 = (Math.floor(Math.random() * 11 + 1)); 
+    totalScore = 0;
+    $("#total-score").text(totalScore);
+}
+
+
 // scoring
 function win () {
     alert("You won!");
@@ -33,34 +46,20 @@ function lose () {
     losses++;
     $("#losses").text(losses);
     reset ();
+
 }
-
-
-
-
-// reset
-function reset() {
-    var starting = Math.floor(Math.random() * 101 + 19);
-    $("#randomNumber").text(starting);   
-    var savedNum = (Math.floor(Math.random() * 11 + 1));
-    var savedNum1 = (Math.floor(Math.random() * 11 + 1));
-    var savedNum2 = (Math.floor(Math.random() * 11 + 1));
-    var savedNum3 = (Math.floor(Math.random() * 11 + 1)); 
-    var totalScore = 0;
-    $("#total-score").text(totalScore);
-}
-
-
 
     // button on click events
     $("#lightBtn").on("click", function(){
         totalScore = savedNum + totalScore;
         $("#total-score").text(totalScore);
+        console.log(totalScore);
+
         if (totalScore === starting)
         {
             win ();
         }
-        else if (totalScore > starting)
+        else if(totalScore > starting)
         {
             lose ();
         }
@@ -71,6 +70,8 @@ function reset() {
     $("#lightBtn1").on("click", function(){
         totalScore = savedNum1 + totalScore;
         $("#total-score").text(totalScore);
+        console.log(totalScore);
+
         if (totalScore === starting)
         {
             win ();
@@ -85,6 +86,8 @@ function reset() {
     $("#lightBtn2").on("click", function(){
         totalScore = savedNum2 + totalScore;
         $("#total-score").text(totalScore);
+        console.log(totalScore);
+
         if (totalScore === starting)
         {
             win ();
@@ -93,13 +96,17 @@ function reset() {
         {
             lose ();
         }
+        // else {
+
+        // }
 
     })
 
     $("#lightBtn3").on("click", function(){
-
         totalScore = savedNum3 + totalScore;
         $("#total-score").text(totalScore);
+        console.log(totalScore);
+
         if (totalScore === starting)
         {
             win ();
@@ -110,9 +117,10 @@ function reset() {
 
         }
 
-    })  
+    }) 
+})
 
-    })
+
 
 
 
